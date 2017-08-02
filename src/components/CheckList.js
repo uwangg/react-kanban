@@ -9,6 +9,7 @@ class CheckList extends Component {
 					<a href="#" className="checklist__task--remove" />
 				</li>
 			));
+
 		return (
 			<div className="checklist">
 				<ul>{tasks}</ul>

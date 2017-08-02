@@ -19,6 +19,11 @@ class Search extends Component {
 		event.preventDefault();
 	};
 
+	handleClick() {
+		// 원시 DOM API를 이용해 텍스트 입력으로 포커스 전환
+		this.refs.myTextInput.focus();
+	}
+
 	render() {
 		let textAreaStyle = {
 			margin: 20
@@ -52,6 +57,15 @@ class Search extends Component {
 						</div>
 						<button type="submit">Submit</button>
 					</form>
+				</div>
+
+				<div style={textAreaStyle}>
+					<input type="text" ref="myTextInput" />
+					<input 
+						type="button"
+						value="Focus the text input"
+						onClick={this.handleClick.bind(this)}
+					/>
 				</div>
 			</div>
 		);
