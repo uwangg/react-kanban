@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import KanbanBoard from './components/KanbanBoard';
+import Search from './components/Search';
 
 let cardsList = [
 	{
@@ -39,4 +40,5 @@ let cardsList = [
 	}
 ];
 const rootElement = document.getElementById('root');
+// ReactDOM.render(<Search />, rootElement);
 ReactDOM.render(<KanbanBoard cards={cardsList} />, rootElement);
